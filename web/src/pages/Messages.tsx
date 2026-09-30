@@ -66,7 +66,10 @@ function Thread({ id }: { id: string }) {
     },
   });
   const count = q.data?.messages.length ?? 0;
-  useEffect(() => end.current?.scrollIntoView({ block: "end" }), [count]);
+  // Braces matter: newer browsers return a Promise from scrollIntoView, and React would call it as a cleanup.
+  useEffect(() => {
+    end.current?.scrollIntoView({ block: "end" });
+  }, [count]);
 
   if (q.isPending) return <Loading />;
   if (q.isError) return <div className="card"><div className="notice notice-bad">{errorText(q.error)}</div></div>;
