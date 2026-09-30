@@ -2,6 +2,8 @@
 
 A used-car marketplace where **dealers and private sellers** list cars, and **buyers** search, save cars and searches, and message sellers without sharing their email. **Moderators** keep scams off the site. It installs on phones as an app (PWA) and still shows recently viewed cars offline.
 
+**Project guide (PDF):** [docs/PROJECT-GUIDE.pdf](docs/PROJECT-GUIDE.pdf) explains what this project is, the business problem it solves, the client's requirements, and how to build it from scratch, step by step.
+
 ![Search](docs/screenshots/search.png)
 
 ## What it does
